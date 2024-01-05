@@ -1,14 +1,20 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+/* Reset browser styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-#Greeting {
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
+/* Body and container styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url(./back\ img.jpg);
+    background-repeat: repeat;
 }
 
 .DataContaner {
@@ -16,54 +22,75 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #fff;
+    gap: 20px;
+    padding:50px;
+    background-color: blue;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-    max-width: 800px;
-    margin: 20px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 50px 50px blue ;
+    transition: 2s;
+}
+.DataContaner:hover{
+    transform: scale(1.03);
+    box-shadow: 0 50px 50px red ;
+    background-color: black;
+    
 }
 
+/* Image and text styles */
 .UserImg {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-.Data {
-    text-align: center;
-    padding: 20px;
-}
-
 h2 {
-    font-size: 20px;
+    font-size: 24px;
+    color: gold;
     margin-bottom: 10px;
 }
-
-a {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
+.DataContaner:hover h2 {
+    color: white;
+}
+a{
+    color: white;
+    border-radius: 3px;
+    transition: all .3s ease-in-out;
+}
+a:hover{
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 20px;
 }
 
 .Blue {
-    background-color: #1c8adb;
+    background-color: blue;
+    text-decoration: none;
 }
-
+.Blue:hover{
+background-color: white;
+color: blue;
+}
 .Red {
-    background-color: #dd2427;
+    text-decoration: none;
+    background-color: red;
+}
+.Red:hover{
+    background-color: white;
+    color: red;
 }
 
 .Black {
-    background-color: #000;
+    background-color: black;
+    text-decoration: none;
 }
-
-a:hover {
-    transform: translateY(-3px);
+.Black:hover{
+    background-color: white;
+    color: black;
+}
+@media screen and (max-width: 768px) {
+    .DataContaner {
+        padding: 10px;
+    }
 }
